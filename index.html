@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Victimes - Croix Rouge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion des Victimes - Croix Rouge</h1>
+        <form action="submit.php" method="post">
+            <label for="nom">N° d'intervention : </label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sexe">Sexe :</label>
+            <select id="sexe" name="sexe">
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+                <option value="autre">Autre</option>
+            </select>
+
+            <label for="intervention">Type d'intervention :</label>
+            <input type="text" id="intervention" name="intervention" required>
+
+            <label for="description">Description de l'intervention :</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="bpm">BPM :</label>
+            <input type="number" id="bpm" name="bpm" >
+
+            <label for="saturation">Saturation en oxygène :</label>
+            <input type="number" id="saturation" name="saturation" >
+
+            <label for="tension">Tension :</label>
+            <input type="text" id="tension" name="tension" >
+
+            <label for="pupilles">Symétrie des pupilles :</label>
+            <select id="pupilles" name="pupilles">
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+
+            <label for="reponse">Réponse cohérente :</label>
+            <select id="reponse" name="reponse">
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+
+            <label>Devenir de la victime :</label>
+            <div>
+                <input type="checkbox" id="retour_sur_site" name="devenir[]" value="retour_sur_site">
+                <label for="retour_sur_site">Retour sur site</label>
+            </div>
+            <div>
+                <input type="checkbox" id="evacuation_par_elle_meme" name="devenir[]" value="evacuation_par_elle_meme">
+                <label for="evacuation_par_elle_meme">Evacuation par elle-même</label>
+            </div>
+            <div>
+                <input type="checkbox" id="evacuation_vpsp_public" name="devenir[]" value="evacuation_vpsp_public">
+                <label for="evacuation_vpsp_public">Evacuation VPSp public</label>
+            </div>
+            <div>
+                <input type="checkbox" id="evacuation_vpsp_CrF" name="devenir[]" value="evacuation_vpsp_CrF">
+                <label for="evacuation_vpsp_CrF">Evacuation VPSp Croix Rouge Française</label>
+            </div>
+            <div>
+                <input type="checkbox" id="surveillance_sur_poste" name="devenir[]" value="surveillance_sur_poste">
+                <label for="surveillance_sur_poste">Surveillance sur poste</label>
+            </div>
+
+            <label for="hosp_nom">Nom de l'hôpital :</label>
+            <input type="text" id="hosp_nom" name="hosp_nom">
+
+            <label for="hosp_service">Service :</label>
+            <input type="text" id="hosp_service" name="hosp_service">
+
+            <label for="hosp_comment">Commentaires supplémentaires :</label>
+            <textarea id="hosp_comment" name="hosp_comment" rows="4"></textarea>
+
+            <input type="submit" value="Enregistrer">
+        </form>
+    </div>
+</body>
+</html>
